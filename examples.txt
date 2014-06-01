@@ -27,7 +27,7 @@ Direccion de Canales
 Select
 Tiempo de espera
 Operaciones sobre canales sin bloqueo
-Closing Channels
+Cerrando canales
 Range over Channels
 Timers
 Tickers
