@@ -70,7 +70,7 @@ func mustReadFile(path string) string {
 
 func cachedPygmentize(lex string, src string) string {
     ensureDir(cacheDir)
-    arg := []string{"-l", lex, "-f", "html"}
+    arg := []string{"-l", lex, "-f", "html", "-O", "encoding=utf-8"}
     cachePath := cacheDir + "/pygmentize-" + strings.Join(arg, "-") + "-" + sha1Sum(src)
     cacheBytes, cacheErr := ioutil.ReadFile(cachePath)
     if cacheErr == nil {
