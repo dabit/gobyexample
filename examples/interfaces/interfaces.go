@@ -22,8 +22,8 @@ type circulo struct {
     radio float64
 }
 
-// Para implementar una interfaz en Go, solo tenemos
-// que implementar todos los metodos de la misma.
+// Para implementar una interfaz en Go, sólo tenemos
+// que implementar todos los métodos de la misma.
 // Aquí implementamos `geometrica` en `cuadro`.
 func (s cuadro) area() float64 {
     return s.ancho * s.altura
@@ -55,7 +55,7 @@ func main() {
     c := circulo{radio: 5}
 
     // Los tipos `circulo` y `cuadro` implementan la
-    // interfaz `geometrica` asi que podemos usar instancias de ambas
+    // interfaz `geometrica` así que podemos usar instancias de ambas
     // como parámetro de `medida`.
     medida(s)
     medida(c)

@@ -16,7 +16,7 @@ func main() {
     // recibido desde `queue`. Debido a que llamamos a
     // `close` arriba, la iteración termina después de
     // recibir los 2 elementos. Si no lo cerramos
-    // entoneces bloqueariamos esperando por un tercer
+    // entonces bloquearíamos esperando por un tercer
     // elemento en la iteración.
     for elem := range queue {
         fmt.Println(elem)

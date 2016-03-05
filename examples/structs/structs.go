@@ -5,7 +5,7 @@ package main
 
 import "fmt"
 
-// El struct `persona` tiene los campos `nombre` y edad.
+// El struct `persona` tiene los campos `nombre` y `edad`.
 type persona struct {
     nombre string
     edad   int
@@ -16,7 +16,7 @@ func main() {
     // Esta sintaxis crea una instancia de un struct.
     fmt.Println(persona{"Bob", 20})
 
-    // Puedes nombrear los campos cuando inicializas un struct.
+    // Puedes definir los valores de los campos cuando inicializas un struct.
     fmt.Println(persona{name: "Alice", age: 30})
 
     // Los campos omitidos serán de valor cero.
@@ -34,7 +34,7 @@ func main() {
     sp := &s
     fmt.Println(sp.age)
 
-    // los Structs son inmutables.
+    // Los Structs son inmutables.
     sp.age = 51
     fmt.Println(sp.age)
 }

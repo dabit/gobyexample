@@ -1,9 +1,9 @@
 // Los [temporizadores](temporizadores) se usan cuando
 // quieres hacer una cosa en el futuro - los _tickers_
-// ( por aquello de tic tac ) - se usan cuando se quiere
+// (por aquello de tic tac) - se usan cuando se quiere
 // hacer algo repetidamente en intervalos regulares.
 // Aquí hay un ejemplo de un ticker que hace tic
-// periodicamente hasta que lo detenemos.
+// periódicamente hasta que lo detenemos.
 
 package main
 
@@ -13,9 +13,9 @@ import "fmt"
 func main() {
 
     // Los tickers usan un mecanismo similar a los
-    // temporizadores: un canal el que se le envían
+    // temporizadores: un canal al que se le envían
     // valores. Aquí vamos a usar el builtin `range` en
-    // el canal para iterar cada 500ms. los valores
+    // el canal para iterar cada 500ms los valores
     // conforme van llegando.
     ticker := time.NewTicker(time.Millisecond * 500)
     go func() {

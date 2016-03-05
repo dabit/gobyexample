@@ -1,7 +1,7 @@
 // Los envíos y recepciones básicos sobre un canal lo
 // bloquean. Sin embargo, podemos usar la cláusula
 // `select` con un cláusula `default` para implementar
-// envios y recepciones sin bloqueo (non-blocking) e
+// envíos y recepciones sin bloqueo (non-blocking) e
 // incluso `select`s multi-vía sin bloqueo.
 package main
 
@@ -13,7 +13,7 @@ func main() {
 
     // Aquí hay un envío sin bloqueo. Si hay algún valor
     // disponible en `messages` entonces el `select`
-    // tomará el `case` `<-messages` con ese valor. Sino
+    // tomará el `case` `<-messages` con ese valor. Si no,
     // tomará inmediatamente el `case` `default`.
     select {
     case msg := <-messages:
@@ -32,8 +32,8 @@ func main() {
     }
 
     // Podemos usar múltiples `case` encima del `default`
-    // para implementar un `select` multi-via sin bloqueo.
-    // Aqui intentamos una recepción sin bloqueo
+    // para implementar un `select` multi-vía sin bloqueo.
+    // Aquí intentamos una recepción sin bloqueo
     // `messages` y `signals`.
     select {
     case msg := <-messages:

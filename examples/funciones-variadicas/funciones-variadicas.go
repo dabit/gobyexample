@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-// Aquí declaramos una función que va a recibir un numero
+// Aquí declaramos una función que va a recibir un número
 // arbitrario de valores tipo `int` como argumentos.
 func sum(nums ...int) {
     fmt.Print(nums, " ")

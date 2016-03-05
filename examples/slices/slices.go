@@ -26,9 +26,9 @@ func main() {
     fmt.Println("len:", len(s))
 
     // Aparte de estas operaciones básicas, los slices
-    // soportan muchas mas que los hacen más funcionales
+    // soportan muchas más que los hacen más funcionales
     // que los arreglos. Una de ellas es `append`, la que
-    // regresa un slice que contiene uno o mas valores nuevos.
+    // regresa un slice que contiene uno o más valores nuevos.
     // Nota que necesitamos asignar el valor de regreso de
     // append tal como lo haríamos con el valor de un slice nuevo.
     s = append(s, "d")

@@ -21,7 +21,7 @@ func main() {
     fmt.Println(a)
     fmt.Println(b)
 
-    // Si solo quieres utilizar uno de los valores que regresa la
+    // Si sólo quieres utilizar uno de los valores que regresa la
     // función, puedes utilizar el identificador vacío `_`.
     _, c := vals()
     fmt.Println(c)

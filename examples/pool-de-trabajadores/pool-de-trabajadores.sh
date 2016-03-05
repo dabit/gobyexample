@@ -1,7 +1,7 @@
 # La salida de nuestro programa muestra que 9 trabajos
 # son ejecutados por varios trabajadores. El programa
-# solo toma cerca de 3 segundos a pesar de que 
-# realiza cerca de 9 segundos de trabajo total porque
+# solo necesita cerca de 3 segundos para realizar 
+# cerca de 9 segundos de trabajo total, ya que
 # hay 3 trabajadores operando de manera concurrente.
 $ time go run examples/worker-pools/worker-pools.go  
 trabajador 1 procesando trabajo 1

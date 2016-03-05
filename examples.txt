@@ -10,10 +10,10 @@ Slices
 Mapas
 Range
 Funciones
-Multiples Valores de Retorno
-Funciones Variadicas
+Múltiples valores de retorno
+Funciones variadicas
 Closures
-Recursion
+Recursión
 Apuntadores
 Structs
 Métodos
@@ -21,9 +21,9 @@ Interfaces
 Errores
 Goroutines
 Canales
-Buffering de Canales
-Sincronizacion de Canales
-Direccion de Canales
+Buffering de canales
+Sincronizacion de canales
+Dirección de canales
 Select
 Tiempo de espera
 Operaciones sobre canales sin bloqueo
@@ -37,11 +37,11 @@ Contadores atómicos
 Mutexes
 Gorutinas con estado
 Ordenamiento
-Ordenamiento por Funciones
+Ordenamiento por funciones
 Panic
 Defer
 Funciones sobre colecciones
-Funciones de Cadenas
+Funciones de cadenas
 Formateo de cadenas
 Expresiones regulares
 JSON

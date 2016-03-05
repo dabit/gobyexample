@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-// Veamos como los apuntadores funcionan en contraste con los valores directos
+// Veamos cómo los apuntadores funcionan en contraste con los valores directos
 // utilizando dos funciones: `zeroval` y `zeroptr`. `zeroval` recibe
 // un parametro `int`, así que los argumentos serán pasados por valor.
 // `zeroval` va a recibir una copia de `ival` distinta a la de la función
@@ -15,10 +15,10 @@ func zeroval(ival int) {
     ival = 0
 }
 
-// `zeroptr` recibe un parametro `*int`, lo que significa
+// `zeroptr` recibe un parámetro `*int`, lo que significa
 // que recibe un apuntador a un valor `int`. El código `*iptr` en el
 // cuerpo de la función _dereferencía_ el apuntador de su dirección de
-// memoria a el valor actual de esa dirección.
+// memoria al valor actual de esa dirección.
 // Si asignamos un valor a un apuntador dereferenciado se cambia el valor
 // que se está almacenando en dicha dirección de memoria.
 func zeroptr(iptr *int) {

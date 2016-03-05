@@ -27,7 +27,7 @@ func main() {
     terminado := make(chan bool, 1)
     go trabajo(terminado)
 
-    // Hay un bloqueo hasta que recibimos la notificacion
+    // Hay un bloqueo hasta que recibimos la notificación
     // de trabajo en el canal.
     <-terminado
 }

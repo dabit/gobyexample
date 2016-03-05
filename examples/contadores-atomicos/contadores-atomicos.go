@@ -1,7 +1,7 @@
 // El mecanismo principal para manejar estados en Go es la comunicación
 // mediante canales (channels).  Podemos ver esto, por ejemplo, con los
-// [_worker-pools_](worker-pools). Además de canales existen otras formas para
-// manejar estados.  En éste código conoceremos el uso del paquete
+// [_pools de trabajadores_](/pool-de-trabajadores). Además de canales existen otras formas para
+// manejar estados. En éste código conoceremos el uso del paquete
 // `sync/atomic` para _contadores atómicos_, los cuales pueden ser accedidos
 // por múltiples _goroutines_.
 
@@ -44,7 +44,7 @@ func main() {
     // por otras _goroutines_, hacemos una copia del valor actual en la
     // variable `opsFinal`, usando la función `atomic.LoadUint64`. Tal como en
     // el bloque anterior necesitamos pasar la dirección de la variable `ops`,
-    // es decir `&ops`, de donde se copiará el valor.
+    // es decir, `&ops`, de donde se copiará el valor.
     opsFinal := atomic.LoadUint64(&ops)
     fmt.Println("ops:", opsFinal)
 }

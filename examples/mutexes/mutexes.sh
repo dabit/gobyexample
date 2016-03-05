@@ -5,6 +5,6 @@ $ go run mutexes.go
 ops: 3598302
 state: map[1:38 4:98 2:23 3:85 0:44]
 
-# A continuación veremos como impleentar el mismo 
+# A continuación veremos cómo implementar el mismo 
 # manejo de estado usando solamente gorutinas y
 # canales.

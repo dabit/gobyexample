@@ -22,10 +22,10 @@ func main() {
 
     // Aquí tenemos el `select` implementando un tiempo de espera.
     // `res := <-c1` espera el resultado y `<-Time.After`
-    // espera el valor que será enviado después de el tiempo de
+    // espera el valor que será enviado después del tiempo de
     // espera de 1s. Como `select` procede con el primer mensaje
     // recibido que esté listo, tomaremos el caso del tiempo de
-    // espera si la operación toma mas de el tiempo permitido (1s).
+    // espera si la operación toma más tiempo del permitido (1s).
     select {
     case res := <-c1:
         fmt.Println(res)

@@ -4,7 +4,7 @@
 
 package main
 
-// Esta función `fact` se llama a si misma hasta que llega a la
+// Esta función `fact` se llama a sí misma hasta que llega a la
 // base de `fact(0)`.
 func fact(n int) int {
     if n == 0 {

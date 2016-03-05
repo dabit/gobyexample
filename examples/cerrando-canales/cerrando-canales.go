@@ -1,13 +1,13 @@
 // Al _cerrar_ un canal, indicamos que ya no se enviarán
 // más valores por él. Esto puede ser útil para comunicar
 // a los canales receptores que el trabajo se ha
-//completado.
+// completado.
 package main
 
 import "fmt"
 
 // En este ejemplo vamos a usar el canal `jobs` para
-// comunicar el trabajo que debe de ser hecho desde la
+// comunicar el trabajo que debe ser realizado desde la
 // gorutina `main()` hacia la gorutina trabajadora. Cuando
 // no haya más trabajos cerraremos el canal `jobs` con la
 // llamada built-in `close`.
@@ -15,7 +15,7 @@ func main() {
     jobs := make(chan int, 5)
     done := make(chan bool)
 
-    // Aquí esta la gorutina trabajadora. Recibe
+    // Aquí está la gorutina trabajadora. Recibe
     // continuamente desde `jobs` con `j, more := <-
     // jobs`.  En esta variante de recepción de 2 valores,
     // el valor `more` será `false` si `jobs` ha sido
@@ -48,6 +48,6 @@ func main() {
 
     // Esperamos a que el trabajador termine usando la
     // [sincronización](sincronizacion-de-canales) de
-    // canales que vimos anteriormente
+    // canales que vimos anteriormente.
     <-done
 }

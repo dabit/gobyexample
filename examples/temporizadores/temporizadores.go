@@ -12,8 +12,8 @@ import "fmt"
 func main() {
 
     // Los temporizadores representan un evento único en
-    // el futuro. Tu le dices al temporizador cuánto tiempo
-    // quieres esperar, y el te proporcionará un canal que
+    // el futuro. Tú le dices al temporizador cuánto tiempo
+    // quieres esperar, y él te proporcionará un canal que
     // será notificado en ese momento. Este temporizador
     // esperará 2 segundos.
     timer1 := time.NewTimer(time.Second * 2)

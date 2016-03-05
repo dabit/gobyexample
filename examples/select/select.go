@@ -14,7 +14,7 @@ func main() {
     c1 := make(chan string)
     c2 := make(chan string)
 
-    // Cada canal va a recibir un valor despues de cierto tiempo,
+    // Cada canal va a recibir un valor después de cierto tiempo,
     // para simular operaciónes bloqueadas de procesos externos
     // en goroutines concurrentes.
     go func() {

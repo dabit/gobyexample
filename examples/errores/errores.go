@@ -1,10 +1,10 @@
-// En Go es idiomatico comunicar errores a través de
+// En Go es idiomático comunicar errores a través de
 // un valor de retorno separado.
 // Esto contrasta con las excepciones usadas en lenguajes
 // como Java y Ruby y sobrecargar el resultado como en
 // ocasiones se hace en C.
 // Con la manera en que se hace en Go es más facil ver
-// cuales funciones regresan errores y manejarlos utilizando
+// qué funciones regresan errores y manejarlos utilizando
 // las mismas estructuras de control como lo hacemos con
 // todas las demás tareas.
 
@@ -32,7 +32,7 @@ func f1(arg int) (int, error) {
 
 // Es posible usar tipos personalizados como `error` simplemente
 // implementando el método `Error()` en ellos. Aquí una
-// variante de el ejemplo anterior que utiliza un tipo personalizado
+// variante del ejemplo anterior que utiliza un tipo personalizado
 // para representar explícitamente un error de argumentos.
 type argError struct {
     arg  int
@@ -58,8 +58,7 @@ func main() {
 
     // Estos dos ciclos prueban cada una de nuestras
     // funciones. Nota que el uso de la revisión de errores
-    // en una sola linea de `if` es un estilo común en
-    // código de Go.
+    // en una única línea de `if` es un estilo común en Go
     for _, i := range []int{7, 42} {
         if r, e := f1(i); e != nil {
             fmt.Println("f1 failed:", e)
@@ -77,7 +76,7 @@ func main() {
 
     // Si quieres usar la información que es parte de un error personalizado
     // programáticamente, vas a necesitar asignar el error a una
-    // una instancia de el tipo personalizado de error por medio de la
+    // una instancia del tipo personalizado de error por medio de la
     // aserción de tipo.
     _, e := f2(42)
     if ae, ok := e.(*argError); ok {

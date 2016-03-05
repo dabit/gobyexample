@@ -5,7 +5,7 @@ $ go run tiempo-de-espera.go
 tiempo de espera 1
 resultado 2
 
-# Utilizar este patron de `select` requiere comunicar
+# Utilizar este patrón de `select` requiere comunicar
 # resultados a través de canales. Esta es una buena
 # idea en general porque otras características importantes
 # de Go están basadas en canales y `select`. Vamos a ver

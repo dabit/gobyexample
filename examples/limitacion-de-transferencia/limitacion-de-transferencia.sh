@@ -8,9 +8,6 @@ peticiones 3 2014-07-16 17:58:37.133983308 +0000 UTC
 peticiones 4 2014-07-16 17:58:37.333995394 +0000 UTC
 peticiones 5 2014-07-16 17:58:37.534003928 +0000 UTC
 
-# For the second batch of requests we serve the first
-# 3 immediately because of the burstable rate limiting,
-# then serve the remaining 2 with ~200ms delays each.
 # Para el segundo bloque de peticiones, servimos los
 # primeros 3 inmediatamente usando el soporte de picos,
 # y luego servimos los 2 restantes con un retraso de 

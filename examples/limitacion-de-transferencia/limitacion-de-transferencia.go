@@ -1,7 +1,7 @@
 // La limitación de tasa de transferencia es un mecanísmo
 // importante para controlar la utilización de un
 // recurso y mantener la calidad del servicio. Go lo
-// soporta elegantemente usando gorutinas, canales y
+// soporta elegantemente usando [gorutinas](/goroutines), [canales](/canales) y
 // [tickers](/tickers).
 
 package main
@@ -12,7 +12,7 @@ import "fmt"
 func main() {
 
     // Primero veamos una limitación básica. Supongamos
-    // que queremos limirar el número de peticiones
+    // que queremos limitar el número de peticiones
     // entrantes que podemos manejar. Serviremos estas
     // peticiones desde un canal con el mismo nombre.
     requests := make(chan int, 5)
@@ -34,9 +34,9 @@ func main() {
         fmt.Println("peticiones", req, time.Now())
     }
 
-    // Podriamos permitir pequeños picos de peticiones
+    // Podríamos permitir pequeños picos de peticiones
     // en nuestro esquema de limitación y seguir
-    // conservando el limite general. Para lograrlo
+    // conservando el límite general. Para lograrlo
     // podemos bufferear nuestro canal `limiter`. Este
     // canal `burstyLimiter` nos permitirá tener picos
     // de hasta 3 eventos.

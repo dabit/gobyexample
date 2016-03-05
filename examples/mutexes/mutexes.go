@@ -42,7 +42,7 @@ func main() {
                 // método `Lock()` del mutex, leemos
                 // el valor de la llave elegida,
                 // desbloqueamos el mutex llamando a `Unlock()`
-                // e incrementamos el contador `ops`
+                // e incrementamos el contador `ops`.
                 llave := rand.Intn(5)
                 mutex.Lock()
                 total += estado[llave]
@@ -50,9 +50,9 @@ func main() {
                 atomic.AddInt64(&ops, 1)
 
                 // Para asegurar que esta gorutina
-                // no asfixie al scheduler, vamos a ceder
-                // explicitamente después de cada operación
-                // llamando `runtime.Gosched()`. Este "ceder"
+                // no asfixie al [_scheduler_](https://es.wikipedia.org/wiki/Planificador), vamos a ceder
+                // explícitamente después de cada operación
+                // llamando `runtime.Gosched()`. Este "cede"
                 // es manejado automáticamente con operaciones
                 // en canales y al realizar llamadas
                 // bloqueantes como `time.Sleep`, pero en
@@ -86,7 +86,7 @@ func main() {
     opsFinal := atomic.LoadInt64(&ops)
     fmt.Println("ops:", opsFinal)
 
-    // Hacemo un bloqueo final del `estado` y mostramos como
+    // Hacemo un bloqueo final del `estado` y mostramos cómo
     // terminó
     mutex.Lock()
     fmt.Println("estado:", estado)

@@ -1,5 +1,5 @@
-// En este ejemplo veremos como implementar un
-// _pool de trabajadores_  usando goroutines y canales.
+// En este ejemplo veremos cómo implementar un
+// _pool de trabajadores_ usando goroutines y canales.
 
 package main
 
@@ -25,7 +25,7 @@ func main() {
 
     // Para usar nuestro pool de trabajadores necesitamos
     // enviarles trabajo y recolectar sus resultados.
-    // Hacemos dos canales para esto.
+    // Creamos dos canales para esto.
     jobs := make(chan int, 100)
     results := make(chan int, 100)
 
@@ -36,7 +36,7 @@ func main() {
     }
 
     // Aquí envíamos 9 _trabajos_ por el canal `jobs` y
-    // luego lo cerramos para indicar que ya hay más
+    // luego lo cerramos para indicar que ya no hay más
     // trabajo por procesar.
     for j := 1; j <= 9; j++ {
         jobs <- j
