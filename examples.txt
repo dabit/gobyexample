@@ -32,6 +32,7 @@ Range sobre canales
 Temporizadores
 Tickers
 Pool de trabajadores
+Grupos de espera
 Limitación de transferencia
 Contadores atómicos
 Mutexes
